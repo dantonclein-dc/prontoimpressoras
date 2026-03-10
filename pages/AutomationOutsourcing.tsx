@@ -65,8 +65,7 @@ const AutomationOutsourcing: React.FC = () => {
   };
 
   const heroImages = [
-    "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=2070&auto=format&fit=crop"
+    "/images/card-automacao.jpg"
   ];
 
   return (
@@ -91,37 +90,37 @@ const AutomationOutsourcing: React.FC = () => {
       {/* Content */}
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-           <div className="space-y-6">
-             <h2 className="text-3xl font-bold text-slate-900">Sua operação não pode parar por hardware.</h2>
-             <p className="text-lg text-slate-600">
-               No varejo e na logística, um equipamento parado significa fila no caixa ou atraso na expedição. Nosso modelo de outsourcing garante equipamentos de backup (spare parts) no local e manutenção expressa.
-             </p>
-             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-               <div className="flex items-center p-4 bg-slate-50 rounded-lg">
-                 <ScanBarcode className="w-8 h-8 text-blue-600 mr-3" />
-                 <span className="font-bold text-slate-800">Coletores de Dados</span>
-               </div>
-               <div className="flex items-center p-4 bg-slate-50 rounded-lg">
-                 <Printer className="w-8 h-8 text-blue-600 mr-3" />
-                 <span className="font-bold text-slate-800">Impressoras Térmicas</span>
-               </div>
-               <div className="flex items-center p-4 bg-slate-50 rounded-lg">
-                 <Package className="w-8 h-8 text-blue-600 mr-3" />
-                 <span className="font-bold text-slate-800">Etiquetadoras</span>
-               </div>
-               <div className="flex items-center p-4 bg-slate-50 rounded-lg">
-                 <Wifi className="w-8 h-8 text-blue-600 mr-3" />
-                 <span className="font-bold text-slate-800">Infra de Rede Wi-Fi</span>
-               </div>
-             </div>
-           </div>
-           <div className="relative h-96">
-             <img 
-               src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=2070&auto=format&fit=crop" 
-               alt="Warehouse automation" 
-               className="absolute inset-0 w-full h-full object-cover rounded-2xl shadow-xl"
-             />
-           </div>
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold text-slate-900">Sua operação não pode parar por hardware.</h2>
+            <p className="text-lg text-slate-600">
+              No varejo e na logística, um equipamento parado significa fila no caixa ou atraso na expedição. Nosso modelo de outsourcing garante equipamentos de backup (spare parts) no local e manutenção expressa.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex items-center p-4 bg-slate-50 rounded-lg">
+                <ScanBarcode className="w-8 h-8 text-blue-600 mr-3" />
+                <span className="font-bold text-slate-800">Coletores de Dados</span>
+              </div>
+              <div className="flex items-center p-4 bg-slate-50 rounded-lg">
+                <Printer className="w-8 h-8 text-blue-600 mr-3" />
+                <span className="font-bold text-slate-800">Impressoras Térmicas</span>
+              </div>
+              <div className="flex items-center p-4 bg-slate-50 rounded-lg">
+                <Package className="w-8 h-8 text-blue-600 mr-3" />
+                <span className="font-bold text-slate-800">Etiquetadoras</span>
+              </div>
+              <div className="flex items-center p-4 bg-slate-50 rounded-lg">
+                <Wifi className="w-8 h-8 text-blue-600 mr-3" />
+                <span className="font-bold text-slate-800">Infra de Rede Wi-Fi</span>
+              </div>
+            </div>
+          </div>
+          <div className="relative h-96">
+            <img
+              src="https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=2070&auto=format&fit=crop"
+              alt="Warehouse automation"
+              className="absolute inset-0 w-full h-full object-cover rounded-2xl shadow-xl"
+            />
+          </div>
         </div>
       </Section>
 
@@ -141,21 +140,21 @@ const AutomationOutsourcing: React.FC = () => {
       {/* Benefits */}
       <Section className="bg-slate-50 py-20">
         <div className="max-w-6xl mx-auto text-center px-4">
-           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-[#1a2b5c]">Benefícios para a Operação</h2>
-           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-blue-500 hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-default">
-                 <h3 className="font-bold text-lg mb-3 text-blue-700">Alta Disponibilidade</h3>
-                 <p className="text-slate-500 text-sm leading-relaxed">Equipamentos robustos (IP65/IP67) preparados para quedas, poeira e umidade.</p>
-              </div>
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-blue-500 hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-default">
-                 <h3 className="font-bold text-lg mb-3 text-blue-700">Gestão de MDM</h3>
-                 <p className="text-slate-500 text-sm leading-relaxed">Gerenciamento remoto de dispositivos móveis. Atualização de software e bloqueio remoto.</p>
-              </div>
-              <div className="bg-white p-8 rounded-2xl shadow-sm border border-blue-500 hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-default">
-                 <h3 className="font-bold text-lg mb-3 text-blue-700">Homologação Técnica</h3>
-                 <p className="text-slate-500 text-sm leading-relaxed">Ajudamos a escolher o hardware compatível com seu WMS ou ERP (SAP, Totvs, Oracle).</p>
-              </div>
-           </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-[#1a2b5c]">Benefícios para a Operação</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-blue-500 hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-default">
+              <h3 className="font-bold text-lg mb-3 text-blue-700">Alta Disponibilidade</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">Equipamentos robustos (IP65/IP67) preparados para quedas, poeira e umidade.</p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-blue-500 hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-default">
+              <h3 className="font-bold text-lg mb-3 text-blue-700">Gestão de MDM</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">Gerenciamento remoto de dispositivos móveis. Atualização de software e bloqueio remoto.</p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-blue-500 hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-default">
+              <h3 className="font-bold text-lg mb-3 text-blue-700">Homologação Técnica</h3>
+              <p className="text-slate-500 text-sm leading-relaxed">Ajudamos a escolher o hardware compatível com seu WMS ou ERP (SAP, Totvs, Oracle).</p>
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -173,26 +172,25 @@ const AutomationOutsourcing: React.FC = () => {
               Perguntas Frequentes sobre Locação de<br className="hidden md:block" /> Equipamentos de Automação:
             </h2>
             <div className="space-y-4">
-               {faqs.map((faq, index) => (
-                  <div key={index} className="bg-white rounded-lg overflow-hidden">
-                     <button 
-                        onClick={() => toggleFaq(index)}
-                        className="w-full flex justify-between items-center p-5 text-left focus:outline-none hover:bg-slate-50 transition-colors"
-                     >
-                        <span className="font-bold text-[#1a1642] text-base md:text-lg pr-4">{faq.question}</span>
-                        <ChevronDown className={`w-5 h-5 text-[#1a1642] flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
-                     </button>
-                     <div 
-                        className={`overflow-hidden transition-all duration-300 bg-white ${
-                           openFaq === index ? 'max-h-96 opacity-100 border-t border-slate-100' : 'max-h-0 opacity-0'
-                        }`}
-                     >
-                        <div className="p-5 text-slate-600 leading-relaxed text-sm">
-                           {faq.answer}
-                        </div>
-                     </div>
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden">
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className="w-full flex justify-between items-center p-5 text-left focus:outline-none hover:bg-slate-50 transition-colors"
+                  >
+                    <span className="font-bold text-[#1a1642] text-base md:text-lg pr-4">{faq.question}</span>
+                    <ChevronDown className={`w-5 h-5 text-[#1a1642] flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 bg-white ${openFaq === index ? 'max-h-96 opacity-100 border-t border-slate-100' : 'max-h-0 opacity-0'
+                      }`}
+                  >
+                    <div className="p-5 text-slate-600 leading-relaxed text-sm">
+                      {faq.answer}
+                    </div>
                   </div>
-               ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -200,12 +198,12 @@ const AutomationOutsourcing: React.FC = () => {
 
       {/* CTA */}
       <Section className="text-center">
-         <div className="bg-blue-900 rounded-3xl p-12 text-white shadow-xl">
-            <h2 className="text-3xl font-bold mb-6">Precisa renovar seus equipamentos de automação?</h2>
-            <Link to="/contato" className="bg-white text-blue-900 font-bold py-4 px-10 rounded-full hover:bg-blue-50 transition-colors shadow-lg inline-block">
-              Falar com Consultor de Automação
-            </Link>
-         </div>
+        <div className="bg-blue-900 rounded-3xl p-12 text-white shadow-xl">
+          <h2 className="text-3xl font-bold mb-6">Precisa renovar seus equipamentos de automação?</h2>
+          <Link to="/contato" className="bg-white text-blue-900 font-bold py-4 px-10 rounded-full hover:bg-blue-50 transition-colors shadow-lg inline-block">
+            Falar com Consultor de Automação
+          </Link>
+        </div>
       </Section>
     </div>
   );

@@ -65,8 +65,7 @@ const ComputerOutsourcing: React.FC = () => {
   };
 
   const heroImages = [
-    "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=1932&auto=format&fit=crop"
+    "/images/card-computadores.jpg"
   ];
 
   return (
@@ -91,10 +90,10 @@ const ComputerOutsourcing: React.FC = () => {
       {/* Content */}
       <Section>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-           <div>
-            <img 
-              src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=1932&auto=format&fit=crop" 
-              alt="Setup de trabalho moderno" 
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=1932&auto=format&fit=crop"
+              alt="Setup de trabalho moderno"
               className="rounded-2xl shadow-xl w-full"
             />
           </div>
@@ -138,27 +137,27 @@ const ComputerOutsourcing: React.FC = () => {
       <Section bg="gray">
         <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Equipamentos Disponíveis</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-           <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-500 transition-colors">
-             <div className="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
-               <Monitor className="w-16 h-16 text-slate-400" />
-             </div>
-             <h3 className="text-xl font-bold mb-2">Notebooks Corporativos</h3>
-             <p className="text-slate-600 text-sm">Linhas Pro da Dell, Lenovo e HP. Foco em durabilidade e bateria.</p>
-           </div>
-           <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-500 transition-colors">
-             <div className="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
-               <Cpu className="w-16 h-16 text-slate-400" />
-             </div>
-             <h3 className="text-xl font-bold mb-2">Desktops & Workstations</h3>
-             <p className="text-slate-600 text-sm">Alta performance para renderização, CAD e processamento de dados.</p>
-           </div>
-           <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-500 transition-colors">
-             <div className="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
-               <RefreshCw className="w-16 h-16 text-slate-400" />
-             </div>
-             <h3 className="text-xl font-bold mb-2">Servidores Locais</h3>
-             <p className="text-slate-600 text-sm">Infraestrutura on-premise gerenciada para aplicações críticas.</p>
-           </div>
+          <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-500 transition-colors">
+            <div className="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
+              <Monitor className="w-16 h-16 text-slate-400" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Notebooks Corporativos</h3>
+            <p className="text-slate-600 text-sm">Linhas Pro da Dell, Lenovo e HP. Foco em durabilidade e bateria.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-500 transition-colors">
+            <div className="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
+              <Cpu className="w-16 h-16 text-slate-400" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Desktops & Workstations</h3>
+            <p className="text-slate-600 text-sm">Alta performance para renderização, CAD e processamento de dados.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-500 transition-colors">
+            <div className="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
+              <RefreshCw className="w-16 h-16 text-slate-400" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Servidores Locais</h3>
+            <p className="text-slate-600 text-sm">Infraestrutura on-premise gerenciada para aplicações críticas.</p>
+          </div>
         </div>
       </Section>
 
@@ -176,26 +175,25 @@ const ComputerOutsourcing: React.FC = () => {
               Perguntas Frequentes sobre Locação de Notebooks e<br className="hidden md:block" /> Computadores:
             </h2>
             <div className="space-y-4">
-               {faqs.map((faq, index) => (
-                  <div key={index} className="bg-white rounded-lg overflow-hidden">
-                     <button 
-                        onClick={() => toggleFaq(index)}
-                        className="w-full flex justify-between items-center p-5 text-left focus:outline-none hover:bg-slate-50 transition-colors"
-                     >
-                        <span className="font-bold text-[#1a1642] text-base md:text-lg pr-4">{faq.question}</span>
-                        <ChevronDown className={`w-5 h-5 text-[#1a1642] flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
-                     </button>
-                     <div 
-                        className={`overflow-hidden transition-all duration-300 bg-white ${
-                           openFaq === index ? 'max-h-96 opacity-100 border-t border-slate-100' : 'max-h-0 opacity-0'
-                        }`}
-                     >
-                        <div className="p-5 text-slate-600 leading-relaxed text-sm">
-                           {faq.answer}
-                        </div>
-                     </div>
+              {faqs.map((faq, index) => (
+                <div key={index} className="bg-white rounded-lg overflow-hidden">
+                  <button
+                    onClick={() => toggleFaq(index)}
+                    className="w-full flex justify-between items-center p-5 text-left focus:outline-none hover:bg-slate-50 transition-colors"
+                  >
+                    <span className="font-bold text-[#1a1642] text-base md:text-lg pr-4">{faq.question}</span>
+                    <ChevronDown className={`w-5 h-5 text-[#1a1642] flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
+                  </button>
+                  <div
+                    className={`overflow-hidden transition-all duration-300 bg-white ${openFaq === index ? 'max-h-96 opacity-100 border-t border-slate-100' : 'max-h-0 opacity-0'
+                      }`}
+                  >
+                    <div className="p-5 text-slate-600 leading-relaxed text-sm">
+                      {faq.answer}
+                    </div>
                   </div>
-               ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -203,12 +201,12 @@ const ComputerOutsourcing: React.FC = () => {
 
       {/* CTA */}
       <Section className="text-center">
-         <div className="bg-blue-900 rounded-3xl p-12 text-white">
-            <h2 className="text-3xl font-bold mb-6">Precisa renovar o parque de máquinas?</h2>
-            <Link to="/contato" className="bg-white text-blue-900 font-bold py-4 px-10 rounded-full hover:bg-blue-50 transition-colors shadow-lg inline-block">
-              Solicitar Orçamento HaaS
-            </Link>
-         </div>
+        <div className="bg-blue-900 rounded-3xl p-12 text-white">
+          <h2 className="text-3xl font-bold mb-6">Precisa renovar o parque de máquinas?</h2>
+          <Link to="/contato" className="bg-white text-blue-900 font-bold py-4 px-10 rounded-full hover:bg-blue-50 transition-colors shadow-lg inline-block">
+            Solicitar Orçamento HaaS
+          </Link>
+        </div>
       </Section>
     </div>
   );

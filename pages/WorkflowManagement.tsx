@@ -7,8 +7,7 @@ import { FileText, Search, Lock, Share2, ChevronRight, ArrowUpRight, ArrowRight,
 
 const WorkflowManagement: React.FC = () => {
   const heroImages = [
-    "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1618044733300-9472054094ee?q=80&w=2071&auto=format&fit=crop"
+    "/images/card-ged.jpg"
   ];
 
   const [activeAdvantage, setActiveAdvantage] = useState('economia');
@@ -77,42 +76,42 @@ const WorkflowManagement: React.FC = () => {
       {/* Content */}
       <Section>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-           <div className="order-2 md:order-1 relative">
-             <div className="absolute top-0 -left-4 w-24 h-24 bg-blue-100 rounded-full blur-2xl"></div>
-             <img 
-               src="https://images.unsplash.com/photo-1618044733300-9472054094ee?q=80&w=2071&auto=format&fit=crop" 
-               alt="Tablet com documentos" 
-               className="rounded-2xl shadow-xl w-full relative z-10"
-             />
-           </div>
-           <div className="order-1 md:order-2 space-y-6">
-             <h2 className="text-3xl font-bold text-slate-900">Do arquivo físico para a inteligência digital.</h2>
-             <p className="text-lg text-slate-600">
-               Armazenar papel é caro e inseguro. Nossa solução de workflow captura o documento na origem (scanner ou e-mail), extrai os dados via OCR e inicia o processo de aprovação automaticamente.
-             </p>
-             <div className="grid grid-cols-2 gap-6">
-               <div className="bg-slate-50 p-4 rounded-lg">
-                 <Search className="w-8 h-8 text-blue-600 mb-2" />
-                 <h3 className="font-bold text-slate-900">Indexação Inteligente</h3>
-                 <p className="text-sm text-slate-600">Encontre qualquer contrato em segundos por palavra-chave.</p>
-               </div>
-               <div className="bg-slate-50 p-4 rounded-lg">
-                 <Lock className="w-8 h-8 text-blue-600 mb-2" />
-                 <h3 className="font-bold text-slate-900">Segurança Jurídica</h3>
-                 <p className="text-sm text-slate-600">Controle de versão, trilha de auditoria e assinatura digital.</p>
-               </div>
-               <div className="bg-slate-50 p-4 rounded-lg">
-                 <Share2 className="w-8 h-8 text-blue-600 mb-2" />
-                 <h3 className="font-bold text-slate-900">Workflow Automático</h3>
-                 <p className="text-sm text-slate-600">Aprovação de pagamentos e contratos sem trâmite físico.</p>
-               </div>
-               <div className="bg-slate-50 p-4 rounded-lg">
-                 <FileText className="w-8 h-8 text-blue-600 mb-2" />
-                 <h3 className="font-bold text-slate-900">Captura Descentralizada</h3>
-                 <p className="text-sm text-slate-600">Digitalize via celular, multifuncional ou scanner dedicado.</p>
-               </div>
-             </div>
-           </div>
+          <div className="order-2 md:order-1 relative">
+            <div className="absolute top-0 -left-4 w-24 h-24 bg-blue-100 rounded-full blur-2xl"></div>
+            <img
+              src="https://images.unsplash.com/photo-1618044733300-9472054094ee?q=80&w=2071&auto=format&fit=crop"
+              alt="Tablet com documentos"
+              className="rounded-2xl shadow-xl w-full relative z-10"
+            />
+          </div>
+          <div className="order-1 md:order-2 space-y-6">
+            <h2 className="text-3xl font-bold text-slate-900">Do arquivo físico para a inteligência digital.</h2>
+            <p className="text-lg text-slate-600">
+              Armazenar papel é caro e inseguro. Nossa solução de workflow captura o documento na origem (scanner ou e-mail), extrai os dados via OCR e inicia o processo de aprovação automaticamente.
+            </p>
+            <div className="grid grid-cols-2 gap-6">
+              <div className="bg-slate-50 p-4 rounded-lg">
+                <Search className="w-8 h-8 text-blue-600 mb-2" />
+                <h3 className="font-bold text-slate-900">Indexação Inteligente</h3>
+                <p className="text-sm text-slate-600">Encontre qualquer contrato em segundos por palavra-chave.</p>
+              </div>
+              <div className="bg-slate-50 p-4 rounded-lg">
+                <Lock className="w-8 h-8 text-blue-600 mb-2" />
+                <h3 className="font-bold text-slate-900">Segurança Jurídica</h3>
+                <p className="text-sm text-slate-600">Controle de versão, trilha de auditoria e assinatura digital.</p>
+              </div>
+              <div className="bg-slate-50 p-4 rounded-lg">
+                <Share2 className="w-8 h-8 text-blue-600 mb-2" />
+                <h3 className="font-bold text-slate-900">Workflow Automático</h3>
+                <p className="text-sm text-slate-600">Aprovação de pagamentos e contratos sem trâmite físico.</p>
+              </div>
+              <div className="bg-slate-50 p-4 rounded-lg">
+                <FileText className="w-8 h-8 text-blue-600 mb-2" />
+                <h3 className="font-bold text-slate-900">Captura Descentralizada</h3>
+                <p className="text-sm text-slate-600">Digitalize via celular, multifuncional ou scanner dedicado.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -170,7 +169,7 @@ const WorkflowManagement: React.FC = () => {
               Vantagens da gestão eletrônica
             </h2>
           </div>
-          
+
           <div className="flex flex-col lg:flex-row border border-slate-200 rounded-xl overflow-hidden shadow-sm bg-white min-h-[600px]">
             {/* Left Column: List */}
             <div className="w-full lg:w-[35%] flex flex-col border-r border-slate-200">
@@ -188,7 +187,7 @@ const WorkflowManagement: React.FC = () => {
                     <span className={`text-base md:text-lg font-bold transition-colors ${isActive ? 'text-[#1e3a8a]' : 'text-slate-500 group-hover:text-slate-700'}`}>
                       {adv.label}
                     </span>
-                    
+
                     <div className={`
                       w-8 h-8 rounded flex items-center justify-center transition-all duration-300
                       ${isActive ? 'bg-[#1e3a8a] text-white' : 'bg-slate-200 text-slate-400 group-hover:bg-slate-300'}
@@ -199,13 +198,13 @@ const WorkflowManagement: React.FC = () => {
                 );
               })}
             </div>
-            
+
             {/* Right Column: Content */}
             <div className="w-full lg:w-[65%] p-8 md:p-12 flex flex-col justify-start transition-all duration-500 bg-white">
               <div className="max-w-xl w-full animate-in fade-in zoom-in duration-500" key={currentAdvantage.id}>
                 <div className="mb-8 relative">
-                  <img 
-                    src={currentAdvantage.image} 
+                  <img
+                    src={currentAdvantage.image}
                     alt={currentAdvantage.title}
                     className="w-full h-64 object-cover rounded-xl shadow-sm"
                   />
@@ -213,17 +212,17 @@ const WorkflowManagement: React.FC = () => {
                     {currentAdvantage.label}
                   </div>
                 </div>
-                
+
                 <h3 className="text-2xl md:text-3xl font-bold text-[#1e3a8a] mb-4">
                   {currentAdvantage.title}
                 </h3>
-                
+
                 <p className="text-slate-600 text-base leading-relaxed mb-8 min-h-[80px]">
                   {currentAdvantage.description}
                 </p>
-                
-                <Link 
-                  to="/contato" 
+
+                <Link
+                  to="/contato"
                   className="inline-flex items-center text-blue-600 font-bold hover:text-blue-800 transition-colors group text-sm"
                 >
                   Falar com especialista
@@ -238,61 +237,59 @@ const WorkflowManagement: React.FC = () => {
       {/* Equipamentos (Dark Navy) */}
       <section className="bg-[#1a2b5c] py-24 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              
-              {/* Left Column: List */}
-              <div>
-                 <span className="text-[#a3e635] font-bold tracking-widest text-xs uppercase mb-2 block">ALTA PERFORMANCE</span>
-                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Equipamentos e Softwares</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                 <div className="flex flex-col space-y-2">
-                    {equipments.map((item) => {
-                       const isActive = activeEquipment === item.id;
-                       return (
-                          <button
-                             key={item.id}
-                             onClick={() => setActiveEquipment(item.id)}
-                             className={`group flex items-center justify-between py-4 px-6 rounded-lg transition-all duration-300 outline-none ${
-                                isActive 
-                                   ? 'bg-[#243b75]' 
-                                   : 'border border-[#243b75] hover:bg-[#243b75]/50'
-                             }`}
-                          >
-                             <span className={`text-lg font-bold ${isActive ? 'text-white' : 'text-slate-300 group-hover:text-white'}`}>
-                                {item.label}
-                             </span>
-                             <div className={`w-6 h-6 rounded-full flex items-center justify-center ${
-                                isActive 
-                                   ? 'bg-[#a3e635]' 
-                                   : 'bg-[#243b75] group-hover:bg-[#3a569c]'
-                             }`}>
-                                <ChevronRight className={`w-4 h-4 ${isActive ? 'text-[#1a2b5c]' : 'text-slate-400 group-hover:text-white'}`} />
-                             </div>
-                          </button>
-                       );
-                    })}
-                 </div>
+            {/* Left Column: List */}
+            <div>
+              <span className="text-[#a3e635] font-bold tracking-widest text-xs uppercase mb-2 block">ALTA PERFORMANCE</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Equipamentos e Softwares</h2>
 
-                 <div className="mt-12">
-                    <Link to="/contato" className="inline-flex items-center text-[#a3e635] font-bold hover:text-[#bef264] transition-colors tracking-wide uppercase text-sm group">
-                       QUERO CONTRATAR <ArrowUpRight className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                 </div>
+              <div className="flex flex-col space-y-2">
+                {equipments.map((item) => {
+                  const isActive = activeEquipment === item.id;
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => setActiveEquipment(item.id)}
+                      className={`group flex items-center justify-between py-4 px-6 rounded-lg transition-all duration-300 outline-none ${isActive
+                          ? 'bg-[#243b75]'
+                          : 'border border-[#243b75] hover:bg-[#243b75]/50'
+                        }`}
+                    >
+                      <span className={`text-lg font-bold ${isActive ? 'text-white' : 'text-slate-300 group-hover:text-white'}`}>
+                        {item.label}
+                      </span>
+                      <div className={`w-6 h-6 rounded-full flex items-center justify-center ${isActive
+                          ? 'bg-[#a3e635]'
+                          : 'bg-[#243b75] group-hover:bg-[#3a569c]'
+                        }`}>
+                        <ChevronRight className={`w-4 h-4 ${isActive ? 'text-[#1a2b5c]' : 'text-slate-400 group-hover:text-white'}`} />
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
 
-              {/* Right Column: Image Card */}
-              <div className="relative">
-                 <div className="bg-white rounded-2xl p-4 shadow-2xl overflow-hidden relative z-10">
-                    <img 
-                       key={currentEquipment.image}
-                       src={currentEquipment.image} 
-                       alt={currentEquipment.label} 
-                       className="w-full h-auto object-cover rounded-xl animate-in fade-in zoom-in duration-500"
-                    />
-                 </div>
+              <div className="mt-12">
+                <Link to="/contato" className="inline-flex items-center text-[#a3e635] font-bold hover:text-[#bef264] transition-colors tracking-wide uppercase text-sm group">
+                  QUERO CONTRATAR <ArrowUpRight className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
+            </div>
 
-           </div>
+            {/* Right Column: Image Card */}
+            <div className="relative">
+              <div className="bg-white rounded-2xl p-4 shadow-2xl overflow-hidden relative z-10">
+                <img
+                  key={currentEquipment.image}
+                  src={currentEquipment.image}
+                  alt={currentEquipment.label}
+                  className="w-full h-auto object-cover rounded-xl animate-in fade-in zoom-in duration-500"
+                />
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -303,10 +300,10 @@ const WorkflowManagement: React.FC = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
               Perguntas Frequentes sobre Gestão Eletrônica de Documentos:
             </h2>
-            
+
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-white rounded-lg overflow-hidden transition-all duration-300"
                 >
@@ -315,17 +312,15 @@ const WorkflowManagement: React.FC = () => {
                     className="w-full p-5 flex justify-between items-center text-left hover:bg-slate-50 transition-colors outline-none"
                   >
                     <span className="font-bold text-[#1a2b5c] text-sm md:text-base pr-4">{faq.question}</span>
-                    <ChevronRight 
-                      className={`w-5 h-5 text-slate-400 transform transition-transform duration-300 flex-shrink-0 ${
-                        activeFaq === index ? '-rotate-90' : 'rotate-90'
-                      }`} 
+                    <ChevronRight
+                      className={`w-5 h-5 text-slate-400 transform transition-transform duration-300 flex-shrink-0 ${activeFaq === index ? '-rotate-90' : 'rotate-90'
+                        }`}
                     />
                   </button>
-                  
-                  <div 
-                    className={`px-5 transition-all duration-300 ease-in-out overflow-hidden ${
-                      activeFaq === index ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0'
-                    }`}
+
+                  <div
+                    className={`px-5 transition-all duration-300 ease-in-out overflow-hidden ${activeFaq === index ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0'
+                      }`}
                   >
                     <p className="text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
                       {faq.answer}

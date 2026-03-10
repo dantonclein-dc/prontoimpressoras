@@ -8,8 +8,7 @@ import { LayoutTemplate, Printer, Store, Monitor, Settings, ChevronRight, ArrowU
 
 const MarketingPlatform: React.FC = () => {
   const heroImages = [
-    "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop"
+    "/images/card-byprice.jpg"
   ];
 
   const equipments = [
@@ -96,7 +95,7 @@ const MarketingPlatform: React.FC = () => {
             <p className="text-lg text-slate-600 leading-relaxed">
               O varejo exige velocidade. Esperar dias pela gráfica para imprimir cartazes de oferta significa perder vendas. Nossa plataforma oferece hardware e software para você criar e imprimir materiais de alta qualidade dentro da loja, com total autonomia.
             </p>
-            
+
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
               <div className="bg-slate-50 p-4 rounded-xl flex items-center border border-slate-100">
                 <Printer className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0" />
@@ -116,11 +115,11 @@ const MarketingPlatform: React.FC = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=2069&auto=format&fit=crop" 
-              alt="Impressão de material promocional no varejo" 
+            <img
+              src="https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=2069&auto=format&fit=crop"
+              alt="Impressão de material promocional no varejo"
               className="rounded-2xl shadow-2xl w-full object-cover h-[400px]"
             />
           </div>
@@ -144,27 +143,27 @@ const MarketingPlatform: React.FC = () => {
       <Section bg="gray">
         <h2 className="text-3xl font-bold text-center text-slate-900 mb-12">Possibilidades de Serviços Ofertados</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-           <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-500 transition-colors">
-             <div className="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
-               <Printer className="w-16 h-16 text-slate-400" />
-             </div>
-             <h3 className="text-xl font-bold mb-2">Impressão de Cartazes e Ofertas</h3>
-             <p className="text-slate-600 text-sm">Impressoras de grande formato para banners e precificação.</p>
-           </div>
-           <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-500 transition-colors">
-             <div className="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
-               <LayoutTemplate className="w-16 h-16 text-slate-400" />
-             </div>
-             <h3 className="text-xl font-bold mb-2">Software de Criação</h3>
-             <p className="text-slate-600 text-sm">Templates padronizados da sua marca. Sua equipe apenas muda o preço e imprime.</p>
-           </div>
-           <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-500 transition-colors">
-             <div className="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
-               <Store className="w-16 h-16 text-slate-400" />
-             </div>
-             <h3 className="text-xl font-bold mb-2">Digital Signage</h3>
-             <p className="text-slate-600 text-sm">Gestão de telas e menu boards digitais integrada.</p>
-           </div>
+          <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-500 transition-colors">
+            <div className="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
+              <Printer className="w-16 h-16 text-slate-400" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Impressão de Cartazes e Ofertas</h3>
+            <p className="text-slate-600 text-sm">Impressoras de grande formato para banners e precificação.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-500 transition-colors">
+            <div className="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
+              <LayoutTemplate className="w-16 h-16 text-slate-400" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Software de Criação</h3>
+            <p className="text-slate-600 text-sm">Templates padronizados da sua marca. Sua equipe apenas muda o preço e imprime.</p>
+          </div>
+          <div className="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-500 transition-colors">
+            <div className="h-48 bg-slate-100 rounded-lg mb-4 flex items-center justify-center">
+              <Store className="w-16 h-16 text-slate-400" />
+            </div>
+            <h3 className="text-xl font-bold mb-2">Digital Signage</h3>
+            <p className="text-slate-600 text-sm">Gestão de telas e menu boards digitais integrada.</p>
+          </div>
         </div>
       </Section>
 
@@ -174,61 +173,59 @@ const MarketingPlatform: React.FC = () => {
       {/* Equipamentos (Dark Navy) */}
       <section className="bg-[#1a2b5c] py-24 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              
-              {/* Left Column: List */}
-              <div>
-                 <span className="text-[#a3e635] font-bold tracking-widest text-xs uppercase mb-2 block">ALTA PERFORMANCE</span>
-                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Equipamentos</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                 <div className="flex flex-col space-y-2">
-                    {equipments.map((item) => {
-                       const isActive = activeEquipment === item.id;
-                       return (
-                          <button
-                             key={item.id}
-                             onClick={() => setActiveEquipment(item.id)}
-                             className={`group flex items-center justify-between py-4 px-6 rounded-lg transition-all duration-300 outline-none ${
-                                isActive 
-                                   ? 'bg-[#243b75]' 
-                                   : 'border border-[#243b75] hover:bg-[#243b75]/50'
-                             }`}
-                          >
-                             <span className={`text-lg font-bold ${isActive ? 'text-white' : 'text-slate-300 group-hover:text-white'}`}>
-                                {item.label}
-                             </span>
-                             <div className={`w-6 h-6 rounded-full flex items-center justify-center ${
-                                isActive 
-                                   ? 'bg-[#a3e635]' 
-                                   : 'bg-[#243b75] group-hover:bg-[#3a569c]'
-                             }`}>
-                                <ChevronRight className={`w-4 h-4 ${isActive ? 'text-[#1a2b5c]' : 'text-slate-400 group-hover:text-white'}`} />
-                             </div>
-                          </button>
-                       );
-                    })}
-                 </div>
+            {/* Left Column: List */}
+            <div>
+              <span className="text-[#a3e635] font-bold tracking-widest text-xs uppercase mb-2 block">ALTA PERFORMANCE</span>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-12">Equipamentos</h2>
 
-                 <div className="mt-12">
-                    <Link to="/contato" className="inline-flex items-center text-[#a3e635] font-bold hover:text-[#bef264] transition-colors tracking-wide uppercase text-sm group">
-                       QUERO CONTRATAR <ArrowUpRight className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
-                    </Link>
-                 </div>
+              <div className="flex flex-col space-y-2">
+                {equipments.map((item) => {
+                  const isActive = activeEquipment === item.id;
+                  return (
+                    <button
+                      key={item.id}
+                      onClick={() => setActiveEquipment(item.id)}
+                      className={`group flex items-center justify-between py-4 px-6 rounded-lg transition-all duration-300 outline-none ${isActive
+                          ? 'bg-[#243b75]'
+                          : 'border border-[#243b75] hover:bg-[#243b75]/50'
+                        }`}
+                    >
+                      <span className={`text-lg font-bold ${isActive ? 'text-white' : 'text-slate-300 group-hover:text-white'}`}>
+                        {item.label}
+                      </span>
+                      <div className={`w-6 h-6 rounded-full flex items-center justify-center ${isActive
+                          ? 'bg-[#a3e635]'
+                          : 'bg-[#243b75] group-hover:bg-[#3a569c]'
+                        }`}>
+                        <ChevronRight className={`w-4 h-4 ${isActive ? 'text-[#1a2b5c]' : 'text-slate-400 group-hover:text-white'}`} />
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
 
-              {/* Right Column: Image Card */}
-              <div className="relative">
-                 <div className="bg-white rounded-2xl p-4 shadow-2xl overflow-hidden relative z-10">
-                    <img 
-                       key={currentEquipment.image}
-                       src={currentEquipment.image} 
-                       alt={currentEquipment.label} 
-                       className="w-full h-auto object-cover rounded-xl animate-in fade-in zoom-in duration-500"
-                    />
-                 </div>
+              <div className="mt-12">
+                <Link to="/contato" className="inline-flex items-center text-[#a3e635] font-bold hover:text-[#bef264] transition-colors tracking-wide uppercase text-sm group">
+                  QUERO CONTRATAR <ArrowUpRight className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
+            </div>
 
-           </div>
+            {/* Right Column: Image Card */}
+            <div className="relative">
+              <div className="bg-white rounded-2xl p-4 shadow-2xl overflow-hidden relative z-10">
+                <img
+                  key={currentEquipment.image}
+                  src={currentEquipment.image}
+                  alt={currentEquipment.label}
+                  className="w-full h-auto object-cover rounded-xl animate-in fade-in zoom-in duration-500"
+                />
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -239,10 +236,10 @@ const MarketingPlatform: React.FC = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
               Perguntas Frequentes sobre a Plataforma de Marketing:
             </h2>
-            
+
             <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <div 
+                <div
                   key={index}
                   className="bg-white rounded-lg overflow-hidden transition-all duration-300"
                 >
@@ -251,17 +248,15 @@ const MarketingPlatform: React.FC = () => {
                     className="w-full p-5 flex justify-between items-center text-left hover:bg-slate-50 transition-colors outline-none"
                   >
                     <span className="font-bold text-[#1a2b5c] text-sm md:text-base pr-4">{faq.question}</span>
-                    <ChevronRight 
-                      className={`w-5 h-5 text-slate-400 transform transition-transform duration-300 flex-shrink-0 ${
-                        activeFaq === index ? '-rotate-90' : 'rotate-90'
-                      }`} 
+                    <ChevronRight
+                      className={`w-5 h-5 text-slate-400 transform transition-transform duration-300 flex-shrink-0 ${activeFaq === index ? '-rotate-90' : 'rotate-90'
+                        }`}
                     />
                   </button>
-                  
-                  <div 
-                    className={`px-5 transition-all duration-300 ease-in-out overflow-hidden ${
-                      activeFaq === index ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0'
-                    }`}
+
+                  <div
+                    className={`px-5 transition-all duration-300 ease-in-out overflow-hidden ${activeFaq === index ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0'
+                      }`}
                   >
                     <p className="text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
                       {faq.answer}
