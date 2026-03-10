@@ -31,7 +31,7 @@ const Segments: React.FC = () => {
       id: 'corporativo',
       label: 'Corporativo & Escritórios',
       icon: Building2,
-      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop",
+      image: "/images/seg-corporativo.jpg",
       context: "Escritórios de advocacia, contabilidade e sedes administrativas lidam com alto volume de informações sensíveis. O desafio é garantir a segurança dos dados (LGPD), reduzir custos operacionais e aumentar a produtividade das equipes, eliminando gargalos tecnológicos.",
       solutions: [
         { icon: Printer, title: "Outsourcing de Impressão", description: "Impressão segura com retenção na nuvem, bilhetagem por departamento e controle rigoroso de custos." },
@@ -54,7 +54,7 @@ const Segments: React.FC = () => {
       id: 'saude',
       label: 'Saúde & Hospitais',
       icon: Stethoscope,
-      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=2053&auto=format&fit=crop",
+      image: "/images/seg-saude.jpg",
       context: "Hospitais, clínicas e laboratórios operam em ambientes críticos de 24/7. A tecnologia não pode falhar. A gestão eficiente de prontuários, exames e pulseiras de identificação é vital para a segurança do paciente e a agilidade do atendimento.",
       solutions: [
         { icon: Printer, title: "Impressão Especializada", description: "Impressoras térmicas para pulseiras/etiquetas e equipamentos rápidos para prescrições e exames." },
@@ -77,7 +77,7 @@ const Segments: React.FC = () => {
       id: 'educacao',
       label: 'Educação',
       icon: GraduationCap,
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2070&auto=format&fit=crop",
+      image: "/images/seg-educacao.jpg",
       context: "Escolas e universidades enfrentam picos sazonais de impressão (provas, apostilas) e precisam gerenciar o acesso de milhares de alunos e professores à tecnologia, tudo isso com orçamentos controlados e necessidade de modernização constante.",
       solutions: [
         { icon: Printer, title: "Impressão de Alto Volume", description: "Equipamentos de produção para provas e liberação de impressão via crachá para alunos e professores." },
@@ -100,7 +100,7 @@ const Segments: React.FC = () => {
       id: 'industria',
       label: 'Indústria & Logística',
       icon: Factory,
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop",
+      image: "/images/seg-industria.jpg",
       context: "O chão de fábrica e os centros de distribuição são ambientes hostis para a tecnologia, mas exigem operação ininterrupta. Uma impressora de etiquetas parada ou um terminal de expedição inoperante significa prejuízo imediato na cadeia de suprimentos.",
       solutions: [
         { icon: Printer, title: "Impressão Industrial", description: "Impressoras robustas de código de barras, etiquetas térmicas e documentos de expedição (DANFE)." },
@@ -123,7 +123,7 @@ const Segments: React.FC = () => {
       id: 'varejo',
       label: 'Varejo & Franquias',
       icon: ShoppingCart,
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2070&auto=format&fit=crop",
+      image: "/images/seg-varejo.jpg",
       context: "Redes varejistas possuem operações descentralizadas. O grande desafio é padronizar a tecnologia em dezoito, cinquenta ou centenas de lojas, garantindo que o PDV nunca pare e que a comunicação visual e administrativa seja eficiente.",
       solutions: [
         { icon: Printer, title: "Impressão para PDV e Backoffice", description: "Impressoras de cupom fiscal, multifuncionais para retaguarda e impressão de cartazes de ofertas." },
@@ -148,14 +148,14 @@ const Segments: React.FC = () => {
 
   useEffect(() => {
     if (location.hash) {
-       const key = location.hash.replace('#', '');
-       if (segmentsData.some(s => s.id === key)) {
-         setActiveSegment(key);
-         setTimeout(() => {
-            const el = document.getElementById('portfolio-section');
-            if(el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-         }, 100);
-       }
+      const key = location.hash.replace('#', '');
+      if (segmentsData.some(s => s.id === key)) {
+        setActiveSegment(key);
+        setTimeout(() => {
+          const el = document.getElementById('portfolio-section');
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
     }
   }, [location]);
 
@@ -171,7 +171,7 @@ const Segments: React.FC = () => {
         <HeroBackground images={[activeContent.image]} overlayClassName="bg-[#0a192f]/80" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
           <span className="text-lime-400 font-bold uppercase tracking-widest text-sm mb-4 block">PORTFÓLIO DE SERVIÇOS POR SETOR</span>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Soluções Estratégicas<br/>para o seu Segmento</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">Soluções Estratégicas<br />para o seu Segmento</h1>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Entendemos as dores específicas do seu negócio. Descubra como nossa infraestrutura de TI, Impressão e Gestão de Documentos pode transformar sua operação.
           </p>
@@ -191,8 +191,8 @@ const Segments: React.FC = () => {
                   onClick={() => setActiveSegment(seg.id)}
                   className={`
                     flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm whitespace-nowrap transition-all duration-300
-                    ${isActive 
-                      ? 'bg-[#1a2b5c] text-white shadow-md transform scale-105' 
+                    ${isActive
+                      ? 'bg-[#1a2b5c] text-white shadow-md transform scale-105'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}
                   `}
                 >
@@ -208,7 +208,7 @@ const Segments: React.FC = () => {
       {/* Main Content Area */}
       <section id="portfolio-section" className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Context & Intro */}
           <div className="mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
             <div className="flex items-center gap-4 mb-6">
@@ -307,8 +307,8 @@ const Segments: React.FC = () => {
             <p className="text-xl text-[#1a2b5c]/80 mb-10 max-w-3xl mx-auto font-medium">
               Pare de perder tempo e dinheiro com gestão de equipamentos e documentos. Deixe a tecnologia com a Pronto Impressoras e foque no crescimento do seu negócio.
             </p>
-            <Link 
-              to="/contato" 
+            <Link
+              to="/contato"
               className="inline-flex items-center gap-3 bg-[#1a2b5c] text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-[#0a192f] transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1"
             >
               Falar com um Especialista em {activeContent.label.split(' ')[0]}
