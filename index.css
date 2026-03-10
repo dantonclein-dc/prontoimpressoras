@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/* Global styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Marquee animation (used in Home.tsx and AboutPronto.tsx) */
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-marquee-right {
+  animation: marquee-right 40s linear infinite;
+}
+
+/* Pan horizontal animation (used in AboutPronto.tsx) */
+@keyframes pan-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-16.66%);
+  }
+}
+
+.animate-pan-horizontal {
+  animation: pan-horizontal 20s alternate infinite linear;
+}
+
+/* Fade-in animation (used in PrintOutsourcing.tsx) */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Pan horizontal animation for OurCulture hero */
+@keyframes pan-horizontal-culture {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-16.66%);
+  }
+}
+
+.animate-pan-horizontal-culture {
+  animation: pan-horizontal-culture 25s alternate infinite linear;
+}
+
+/* Vertical parallax slow (used in OurCulture.tsx) */
+@keyframes pan-vertical-slow {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-15%);
+  }
+}
+
+.animate-pan-vertical-slow {
+  animation: pan-vertical-slow 15s alternate infinite linear;
+}
+
+/* Vertical parallax ESG (used in OurCulture.tsx) */
+@keyframes pan-vertical-esg {
+  0% {
+    transform: translateY(-10%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.animate-pan-vertical-esg {
+  animation: pan-vertical-esg 20s alternate infinite linear;
+}

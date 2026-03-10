@@ -1,0 +1,33 @@
+# Pronto Impressoras e Tecnologia
+
+> Especialistas em outsourcing de impressão, outsourcing de computadores (HaaS), gestão eletrônica de documentos (GED) e suporte de TI para empresas. Atuando desde 2010 no Rio de Janeiro e em todo o Brasil.
+
+## Sobre a empresa
+
+A Pronto Impressoras é uma empresa B2B fundada em 2010, com sede em Mesquita, Rio de Janeiro. Atendemos empresas de médio e grande porte que buscam reduzir custos operacionais e simplificar a gestão de tecnologia através do modelo de tecnologia como serviço (as-a-service).
+
+## Soluções oferecidas
+
+- **Outsourcing de Impressão**: Aluguel e gestão de impressoras e multifuncionais corporativas com suporte técnico ilimitado, toner e manutenção inclusos.
+- **Outsourcing de Computadores (HaaS)**: Notebooks, desktops e workstations como serviço, com renovação tecnológica a cada 36 meses.
+- **Gestão Eletrônica de Documentos (GED)**: Digitalização, automação e controle de documentos corporativos.
+- **Suporte de TI**: Suporte técnico especializado para toda a infraestrutura de tecnologia da empresa.
+
+## Páginas principais
+
+- [Home](/) - Visão geral das soluções e proposta de valor
+- [Quem Somos](/quem-somos) - História, missão e valores desde 2010
+- [Outsourcing de Impressão](/solucoes/impressao) - Detalhes do serviço de impressão
+- [Outsourcing de Computadores](/solucoes/computadores) - Detalhes do HaaS
+- [Automação de Documentos](/solucoes/automacao) - Detalhes do GED
+- [Segmentos Atendidos](/segmentos) - Setores e tipos de empresas atendidos
+- [Suporte](/suporte) - SLA e como funciona o atendimento técnico
+- [Blog](/blog) - Artigos sobre gestão de TI e outsourcing
+- [Contato](/contato) - Solicitar orçamento ou falar com especialista
+
+## Contato
+
+- **Endereço**: Rua Professora Rakel Rechuem, 48 - Vila Emil, Mesquita/RJ
+- **Telefone**: (21) 99172-4810
+- **E-mail**: contato@prontoimpressoras.com.br
+- **Área de atendimento**: Rio de Janeiro e todo o Brasil

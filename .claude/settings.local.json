@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"/c/Users/Danto/OneDrive/Área de Trabalho/Site Pronto Impressoras/bkp090326\" && npm install 2>&1 | tail -5)",
+      "Bash(cd \"/c/Users/Danto/OneDrive/Área de Trabalho/Site Pronto Impressoras/bkp090326\" && npm install --legacy-peer-deps 2>&1 | tail -10)",
+      "Bash(git init:*)"
+    ]
+  }
+}
