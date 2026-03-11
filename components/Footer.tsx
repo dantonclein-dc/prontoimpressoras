@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from 'lucide-react';
+import { COMPANY } from '../constants';
 
 const Footer: React.FC = () => {
   return (
@@ -21,9 +22,9 @@ const Footer: React.FC = () => {
               Especialistas em outsourcing de impressão e gestão de infraestrutura de TI. Entregamos eficiência, redução de custos e tecnologia de ponta para empresas no Rio de Janeiro e em todo o Brasil.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/company/prontoimpressoras" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Pronto Impressoras" className="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-blue-200 hover:bg-lime-500 hover:text-blue-950 transition-all"><Linkedin className="w-5 h-5" /></a>
-              <a href="https://www.facebook.com/prontoimpressoras" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Pronto Impressoras" className="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-blue-200 hover:bg-lime-500 hover:text-blue-950 transition-all"><Facebook className="w-5 h-5" /></a>
-              <a href="https://www.instagram.com/prontoimpressoras" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Pronto Impressoras" className="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-blue-200 hover:bg-lime-500 hover:text-blue-950 transition-all"><Instagram className="w-5 h-5" /></a>
+              <a href={COMPANY.social.linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Pronto Impressoras" className="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-blue-200 hover:bg-lime-500 hover:text-blue-950 transition-all"><Linkedin className="w-5 h-5" /></a>
+              <a href={COMPANY.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook da Pronto Impressoras" className="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-blue-200 hover:bg-lime-500 hover:text-blue-950 transition-all"><Facebook className="w-5 h-5" /></a>
+              <a href={COMPANY.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram da Pronto Impressoras" className="w-10 h-10 rounded-full bg-blue-900 flex items-center justify-center text-blue-200 hover:bg-lime-500 hover:text-blue-950 transition-all"><Instagram className="w-5 h-5" /></a>
             </div>
           </div>
 
@@ -57,15 +58,15 @@ const Footer: React.FC = () => {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-4">
                 <MapPin className="w-5 h-5 text-lime-500 shrink-0 mt-0.5" />
-                <span>Matriz : Mesquita /RJ<br />Rua Professora Rakel Rechuem, 48 - Vila Emil</span>
+                <span>{COMPANY.address.label}<br />{COMPANY.address.street} - {COMPANY.address.neighborhood}</span>
               </li>
               <li className="flex items-center gap-4">
                 <Phone className="w-5 h-5 text-lime-500 shrink-0" />
-                <a href="tel:+5521991724810" className="font-semibold text-white hover:text-lime-400 transition-colors">(21) 99172-4810</a>
+                <a href={`tel:+${COMPANY.phone}`} className="font-semibold text-white hover:text-lime-400 transition-colors">{COMPANY.phoneFormatted}</a>
               </li>
               <li className="flex items-center gap-4">
                 <Mail className="w-5 h-5 text-lime-500 shrink-0" />
-                <a href="mailto:contato@prontoimpressoras.com.br" className="hover:text-lime-400 transition-colors">contato@prontoimpressoras.com.br</a>
+                <a href={`mailto:${COMPANY.email}`} className="hover:text-lime-400 transition-colors">{COMPANY.email}</a>
               </li>
             </ul>
           </div>

@@ -4,6 +4,7 @@ import Section from '../components/Section';
 import HeroBackground from '../components/HeroBackground';
 import { Link } from 'react-router-dom';
 import { FileText, Search, Lock, Share2, ChevronRight, ArrowUpRight, ArrowRight, Database, FileSignature, Printer, LayoutTemplate, Store } from 'lucide-react';
+import FaqAccordion from '../components/FaqAccordion';
 
 const WorkflowManagement: React.FC = () => {
   const heroImages = [
@@ -28,8 +29,6 @@ const WorkflowManagement: React.FC = () => {
     { id: 'mobile', label: 'Soluções de Captura Mobile', image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop' }
   ];
   const currentEquipment = equipments.find(e => e.id === activeEquipment) || equipments[0];
-
-  const [activeFaq, setActiveFaq] = useState<number | null>(null);
 
   const faqs: { question: string; answer: React.ReactNode }[] = [
     {
@@ -301,34 +300,7 @@ const WorkflowManagement: React.FC = () => {
               Perguntas Frequentes sobre Gestão Eletrônica de Documentos:
             </h2>
 
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-lg overflow-hidden transition-all duration-300"
-                >
-                  <button
-                    onClick={() => setActiveFaq(activeFaq === index ? null : index)}
-                    className="w-full p-5 flex justify-between items-center text-left hover:bg-slate-50 transition-colors outline-none"
-                  >
-                    <span className="font-bold text-[#1a2b5c] text-sm md:text-base pr-4">{faq.question}</span>
-                    <ChevronRight
-                      className={`w-5 h-5 text-slate-400 transform transition-transform duration-300 flex-shrink-0 ${activeFaq === index ? '-rotate-90' : 'rotate-90'
-                        }`}
-                    />
-                  </button>
-
-                  <div
-                    className={`px-5 transition-all duration-300 ease-in-out overflow-hidden ${activeFaq === index ? 'max-h-96 pb-5 opacity-100' : 'max-h-0 opacity-0'
-                      }`}
-                  >
-                    <p className="text-slate-600 text-sm leading-relaxed border-t border-slate-100 pt-4">
-                      {faq.answer}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <FaqAccordion items={faqs} defaultOpen={null} />
           </div>
         </div>
       </section>

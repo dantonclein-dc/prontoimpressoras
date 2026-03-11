@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Section from '../components/Section';
 import HeroBackground from '../components/HeroBackground';
 import AdvantagesSection from '../components/AdvantagesSection';
 import EquipmentShowcase from '../components/EquipmentShowcase';
 import { Link } from 'react-router-dom';
-import { ScanBarcode, Printer, Package, Wifi, ChevronDown } from 'lucide-react';
+import { ScanBarcode, Printer, Package, Wifi } from 'lucide-react';
+import FaqAccordion from '../components/FaqAccordion';
 
 const automationEquipment = [
   {
@@ -31,8 +32,6 @@ const automationEquipment = [
 ];
 
 const AutomationOutsourcing: React.FC = () => {
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
-
   const faqs: { question: string; answer: React.ReactNode }[] = [
     {
       question: "Quem pode contratar o serviço de outsourcing de automação?",
@@ -59,10 +58,6 @@ const AutomationOutsourcing: React.FC = () => {
       answer: <>Basta <Link to="/contato" className="text-[#1a1642] hover:text-blue-600 underline decoration-blue-300 hover:decoration-blue-600 transition-colors font-bold">entrar em contato com nossos especialistas através do formulário no site</Link> ou telefone. Faremos um levantamento das suas necessidades e apresentaremos a melhor solução.</>
     }
   ];
-
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
 
   const heroImages = [
     "/images/card-automacao.jpg"
@@ -171,27 +166,7 @@ const AutomationOutsourcing: React.FC = () => {
             <h2 className="text-2xl md:text-4xl font-bold text-white text-center mb-10 leading-tight">
               Perguntas Frequentes sobre Locação de<br className="hidden md:block" /> Equipamentos de Automação:
             </h2>
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-white rounded-lg overflow-hidden">
-                  <button
-                    onClick={() => toggleFaq(index)}
-                    className="w-full flex justify-between items-center p-5 text-left focus:outline-none hover:bg-slate-50 transition-colors"
-                  >
-                    <span className="font-bold text-[#1a1642] text-base md:text-lg pr-4">{faq.question}</span>
-                    <ChevronDown className={`w-5 h-5 text-[#1a1642] flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
-                  </button>
-                  <div
-                    className={`overflow-hidden transition-all duration-300 bg-white ${openFaq === index ? 'max-h-96 opacity-100 border-t border-slate-100' : 'max-h-0 opacity-0'
-                      }`}
-                  >
-                    <div className="p-5 text-slate-600 leading-relaxed text-sm">
-                      {faq.answer}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <FaqAccordion items={faqs} />
           </div>
         </div>
       </section>

@@ -417,15 +417,16 @@ const PrintOutsourcing: React.FC = () => {
                      </div>
                      {/* Footer Button - Only shows Carregar Mais */}
                      {!isHGExpanded && (
-                        <div
+                        <button
+                           type="button"
                            onClick={() => setIsHGExpanded(true)}
-                           className="border-t border-blue-900 bg-blue-50/50 p-5 flex justify-between items-center cursor-pointer hover:bg-blue-100 transition-colors group mt-auto select-none"
+                           className="w-full border-t border-blue-900 bg-blue-50/50 p-5 flex justify-between items-center cursor-pointer hover:bg-blue-100 transition-colors group mt-auto select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-inset"
                         >
                            <span className="text-blue-700 font-bold text-sm tracking-wider uppercase">
                               Carregar Mais
                            </span>
                            <Plus className="w-5 h-5 text-blue-700 group-hover:scale-110 transition-transform" />
-                        </div>
+                        </button>
                      )}
                   </div>
 
@@ -479,15 +480,16 @@ const PrintOutsourcing: React.FC = () => {
                      </div>
                      {/* Footer Button - Only shows Carregar Mais */}
                      {!isMPSExpanded && (
-                        <div
+                        <button
+                           type="button"
                            onClick={() => setIsMPSExpanded(true)}
-                           className="border-t border-blue-900 bg-blue-50/50 p-5 flex justify-between items-center cursor-pointer hover:bg-blue-100 transition-colors group mt-auto select-none"
+                           className="w-full border-t border-blue-900 bg-blue-50/50 p-5 flex justify-between items-center cursor-pointer hover:bg-blue-100 transition-colors group mt-auto select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-inset"
                         >
                            <span className="text-blue-700 font-bold text-sm tracking-wider uppercase">
                               Carregar Mais
                            </span>
                            <Plus className="w-5 h-5 text-blue-700 group-hover:scale-110 transition-transform" />
-                        </div>
+                        </button>
                      )}
                   </div>
                </div>

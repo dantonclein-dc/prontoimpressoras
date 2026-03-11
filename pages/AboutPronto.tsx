@@ -1,30 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Section from '../components/Section';
 import HeroBackground from '../components/HeroBackground';
 import { Link } from 'react-router-dom';
-import { Target, Eye, Award, ChevronDown, Zap, TrendingUp, Sliders } from 'lucide-react';
+import { Target, Eye, Award, Zap, TrendingUp, Sliders } from 'lucide-react';
+import FaqAccordion from '../components/FaqAccordion';
+import BrandsMarquee from '../components/BrandsMarquee';
 
 const AboutPronto: React.FC = () => {
-  const [openFaq, setOpenFaq] = useState<number | null>(0);
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const heroImages = [
     "/images/sobre-hero.jpg",
   ];
-
-  const toggleFaq = (index: number) => {
-    setOpenFaq(openFaq === index ? null : index);
-  };
 
   const faqs: { question: string; answer: React.ReactNode }[] = [
     {
@@ -229,71 +215,13 @@ const AboutPronto: React.FC = () => {
         </div>
       </section>
 
-      {/* BRANDS MARQUEE SECTION */}
-      <section className="py-16 bg-white border-t border-slate-100 overflow-hidden relative">
-
-
-        <div className="max-w-7xl mx-auto px-4 mb-10 text-center">
-          <p className="text-sm font-bold text-slate-400 uppercase tracking-widest">Tecnologia Certificada pelos Líderes Globais</p>
-        </div>
-
-        <div className="relative w-full overflow-hidden">
-          {/* Gradient masks */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
-
-          <div className="flex w-[200%] animate-marquee-right hover:pause">
-            {/* First Set */}
-            <div className="flex justify-around w-[50%] gap-16 px-8 items-center">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" alt="HP" className="h-10 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Zebra_Technologies_logo.svg" alt="Zebra" className="h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Epson_logo.svg" alt="Epson" className="h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Canon_Inc._logo.svg" alt="Canon" className="h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Brother_logo.svg" alt="Brother" className="h-10 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg" alt="Samsung" className="h-6 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Ricoh_logo.svg" alt="Ricoh" className="h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" alt="Dell" className="h-10 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-            </div>
-            {/* Second Set (Duplicate) */}
-            <div className="flex justify-around w-[50%] gap-16 px-8 items-center">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" alt="HP" className="h-10 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Zebra_Technologies_logo.svg" alt="Zebra" className="h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/2/23/Epson_logo.svg" alt="Epson" className="h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Canon_Inc._logo.svg" alt="Canon" className="h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Brother_logo.svg" alt="Brother" className="h-10 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Samsung_wordmark.svg" alt="Samsung" className="h-6 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Ricoh_logo.svg" alt="Ricoh" className="h-8 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Dell_Logo.svg" alt="Dell" className="h-10 w-auto object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <BrandsMarquee />
 
       {/* FAQ Section */}
       <section className="bg-slate-50 py-24">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">Perguntas Frequentes</h2>
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg overflow-hidden border border-slate-200 shadow-sm">
-                <button
-                  onClick={() => toggleFaq(index)}
-                  className="w-full flex justify-between items-center p-6 text-left focus:outline-none hover:bg-slate-50 transition-colors"
-                >
-                  <span className="font-bold text-slate-900 text-lg">{faq.question}</span>
-                  <ChevronDown className={`w-5 h-5 text-slate-500 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} />
-                </button>
-                <div
-                  className={`overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                    }`}
-                >
-                  <div className="p-6 pt-0 text-slate-600 border-t border-slate-200 mt-2">
-                    {faq.answer}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <FaqAccordion items={faqs} />
         </div>
       </section>
 

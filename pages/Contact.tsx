@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Section from '../components/Section';
 import HeroBackground from '../components/HeroBackground';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { COMPANY } from '../constants';
 
 const Contact: React.FC = () => {
   const [formStatus, setFormStatus] = useState<'idle' | 'success'>('idle');
@@ -32,7 +33,7 @@ const Contact: React.FC = () => {
       `*Mensagem:* ${message || 'Não informada'}`
     );
 
-    window.open(`https://wa.me/5521991724810?text=${whatsappMessage}`, '_blank');
+    window.open(`https://wa.me/${COMPANY.phone}?text=${whatsappMessage}`, '_blank');
     setFormStatus('success');
   };
 
@@ -65,7 +66,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900">Comercial e Vendas</h3>
-                  <a href="tel:+5521991724810" className="text-slate-600 hover:text-blue-700 transition-colors">(21) 99172-4810</a>
+                  <a href={`tel:+${COMPANY.phone}`} className="text-slate-600 hover:text-blue-700 transition-colors">{COMPANY.phoneFormatted}</a>
                   <p className="text-slate-500 text-sm">Seg a Sex, das 09:00h às 17:00h</p>
                 </div>
               </div>
@@ -76,7 +77,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900">E-mail</h3>
-                  <a href="mailto:contato@prontoimpressoras.com.br" className="text-slate-600 hover:text-blue-700 transition-colors">contato@prontoimpressoras.com.br</a>
+                  <a href={`mailto:${COMPANY.email}`} className="text-slate-600 hover:text-blue-700 transition-colors">{COMPANY.email}</a>
                 </div>
               </div>
 
@@ -85,10 +86,10 @@ const Contact: React.FC = () => {
                   <MapPin className="w-6 h-6 text-blue-900" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900">Matriz : Mesquita /RJ</h3>
+                  <h3 className="font-semibold text-slate-900">{COMPANY.address.label}</h3>
                   <p className="text-slate-600">
-                    Rua Professora Rakel Rechuem, 48<br />
-                    Vila Emil
+                    {COMPANY.address.street}<br />
+                    {COMPANY.address.neighborhood}
                   </p>
                 </div>
               </div>

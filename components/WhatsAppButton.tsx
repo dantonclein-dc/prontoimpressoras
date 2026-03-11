@@ -1,9 +1,8 @@
 import React from 'react';
+import { COMPANY } from '../constants';
 
 const WhatsAppButton: React.FC = () => {
-  const phoneNumber = '5521991724810';
-  const message = encodeURIComponent('Olá! Gostaria de saber mais sobre as soluções de outsourcing da Pronto Impressoras.');
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+  const whatsappUrl = COMPANY.whatsappUrl('Olá! Gostaria de saber mais sobre as soluções de outsourcing da Pronto Impressoras.');
 
   return (
     <a
