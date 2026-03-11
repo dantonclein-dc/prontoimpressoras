@@ -52,22 +52,22 @@ const PrintOutsourcing: React.FC = () => {
       {
          id: 'impressoras',
          label: 'Impressoras',
-         icon: Printer
+         image: 'https://freepngimg.com/thumb/printer/5-2-printer-png-hd.png'
       },
       {
          id: 'multifuncionais',
          label: 'Multifuncionais',
-         icon: Copy
+         image: 'https://freepngimg.com/thumb/printer/6-2-printer-transparent.png'
       },
       {
          id: 'termicas',
          label: 'Impressoras térmicas',
-         icon: Receipt
+         image: 'https://freepngimg.com/thumb/printer/8-2-printer-picture.png'
       },
       {
          id: 'scanners',
          label: 'Scanners',
-         icon: Scan
+         image: 'https://freepngimg.com/thumb/printer/1-2-printer-png.png'
       }
    ];
 
@@ -328,21 +328,21 @@ const PrintOutsourcing: React.FC = () => {
                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-blue-500 rounded-full mix-blend-screen filter blur-[100px] opacity-20"></div>
 
                      <div className="bg-white rounded-[2rem] p-8 md:p-12 h-[500px] flex items-center justify-center shadow-2xl overflow-hidden relative z-10">
-                        {equipments.map((item) => {
-                           const Icon = item.icon;
-                           return (
-                              <div
-                                 key={item.id}
-                                 className={`absolute inset-0 flex flex-col items-center justify-center p-12 transition-all duration-700 transform ${activeEquipmentTab === item.id
-                                    ? 'opacity-100 scale-100 translate-x-0'
-                                    : 'opacity-0 scale-95 translate-x-12 pointer-events-none'
-                                    }`}
-                              >
-                                 <Icon className="w-32 h-32 text-blue-900 drop-shadow-lg" />
-                                 <span className="mt-6 text-2xl font-bold text-blue-950">{item.label}</span>
-                              </div>
-                           );
-                        })}
+                        {equipments.map((item) => (
+                           <div
+                              key={item.id}
+                              className={`absolute inset-0 flex items-center justify-center p-12 transition-all duration-700 transform ${activeEquipmentTab === item.id
+                                 ? 'opacity-100 scale-100 translate-x-0'
+                                 : 'opacity-0 scale-95 translate-x-12 pointer-events-none'
+                                 }`}
+                           >
+                              <img
+                                 src={item.image}
+                                 alt={item.label}
+                                 className="max-w-full max-h-full object-contain drop-shadow-2xl"
+                              />
+                           </div>
+                        ))}
                      </div>
                   </div>
 

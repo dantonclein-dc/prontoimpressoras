@@ -15,22 +15,22 @@ const MarketingPlatform: React.FC = () => {
     {
       id: "impressoras",
       label: "Impressoras de Grande Formato",
-      icon: Printer
+      image: "https://images.unsplash.com/photo-1622480915761-417112014022?q=80&w=2070&auto=format&fit=crop"
     },
     {
       id: "displays",
       label: "Displays e Menu Boards",
-      icon: Monitor
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop"
     },
     {
       id: "totens",
       label: "Totens Interativos",
-      icon: LayoutTemplate
+      image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop"
     },
     {
       id: "players",
       label: "Players de Digital Signage",
-      icon: Settings
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
     }
   ];
 
@@ -215,16 +215,13 @@ const MarketingPlatform: React.FC = () => {
 
             {/* Right Column: Image Card */}
             <div className="relative">
-              <div className="bg-white rounded-2xl p-8 shadow-2xl overflow-hidden relative z-10 flex flex-col items-center justify-center min-h-[300px]">
-                {(() => {
-                  const Icon = currentEquipment.icon;
-                  return (
-                    <div key={currentEquipment.id} className="flex flex-col items-center animate-in fade-in zoom-in duration-500">
-                      <Icon className="w-24 h-24 text-[#1a2b5c]" />
-                      <span className="mt-4 text-xl font-bold text-[#1a2b5c]">{currentEquipment.label}</span>
-                    </div>
-                  );
-                })()}
+              <div className="bg-white rounded-2xl p-4 shadow-2xl overflow-hidden relative z-10">
+                <img
+                  key={currentEquipment.image}
+                  src={currentEquipment.image}
+                  alt={currentEquipment.label}
+                  className="w-full h-auto object-cover rounded-xl animate-in fade-in zoom-in duration-500"
+                />
               </div>
             </div>
 
