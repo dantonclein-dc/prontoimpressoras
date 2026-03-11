@@ -15,22 +15,22 @@ const MarketingPlatform: React.FC = () => {
     {
       id: "impressoras",
       label: "Impressoras de Grande Formato",
-      image: "https://images.unsplash.com/photo-1622480915761-417112014022?q=80&w=2070&auto=format&fit=crop"
+      icon: Printer
     },
     {
       id: "displays",
       label: "Displays e Menu Boards",
-      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974&auto=format&fit=crop"
+      icon: Monitor
     },
     {
       id: "totens",
       label: "Totens Interativos",
-      image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2070&auto=format&fit=crop"
+      icon: LayoutTemplate
     },
     {
       id: "players",
       label: "Players de Digital Signage",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop"
+      icon: Settings
     }
   ];
 
@@ -188,16 +188,16 @@ const MarketingPlatform: React.FC = () => {
                       key={item.id}
                       onClick={() => setActiveEquipment(item.id)}
                       className={`group flex items-center justify-between py-4 px-6 rounded-lg transition-all duration-300 outline-none ${isActive
-                          ? 'bg-[#243b75]'
-                          : 'border border-[#243b75] hover:bg-[#243b75]/50'
+                        ? 'bg-[#243b75]'
+                        : 'border border-[#243b75] hover:bg-[#243b75]/50'
                         }`}
                     >
                       <span className={`text-lg font-bold ${isActive ? 'text-white' : 'text-slate-300 group-hover:text-white'}`}>
                         {item.label}
                       </span>
                       <div className={`w-6 h-6 rounded-full flex items-center justify-center ${isActive
-                          ? 'bg-[#a3e635]'
-                          : 'bg-[#243b75] group-hover:bg-[#3a569c]'
+                        ? 'bg-[#a3e635]'
+                        : 'bg-[#243b75] group-hover:bg-[#3a569c]'
                         }`}>
                         <ChevronRight className={`w-4 h-4 ${isActive ? 'text-[#1a2b5c]' : 'text-slate-400 group-hover:text-white'}`} />
                       </div>
@@ -215,13 +215,16 @@ const MarketingPlatform: React.FC = () => {
 
             {/* Right Column: Image Card */}
             <div className="relative">
-              <div className="bg-white rounded-2xl p-4 shadow-2xl overflow-hidden relative z-10">
-                <img
-                  key={currentEquipment.image}
-                  src={currentEquipment.image}
-                  alt={currentEquipment.label}
-                  className="w-full h-auto object-cover rounded-xl animate-in fade-in zoom-in duration-500"
-                />
+              <div className="bg-white rounded-2xl p-8 shadow-2xl overflow-hidden relative z-10 flex flex-col items-center justify-center min-h-[300px]">
+                {(() => {
+                  const Icon = currentEquipment.icon;
+                  return (
+                    <div key={currentEquipment.id} className="flex flex-col items-center animate-in fade-in zoom-in duration-500">
+                      <Icon className="w-24 h-24 text-[#1a2b5c]" />
+                      <span className="mt-4 text-xl font-bold text-[#1a2b5c]">{currentEquipment.label}</span>
+                    </div>
+                  );
+                })()}
               </div>
             </div>
 
