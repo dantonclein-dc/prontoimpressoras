@@ -19,8 +19,7 @@ const AboutPronto: React.FC = () => {
   }, []);
 
   const heroImages = [
-    "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop", // Meeting
-    "https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop", // Office
+    "/images/sobre-hero.jpg",
   ];
 
   const toggleFaq = (index: number) => {
@@ -84,7 +83,7 @@ const AboutPronto: React.FC = () => {
         <div
           className="absolute inset-0 w-[120%] h-full bg-cover bg-center will-change-transform animate-pan-horizontal"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop")'
+            backgroundImage: 'url("/images/sobre-datacenter.png")'
           }}
         ></div>
         <div className="absolute inset-0 bg-blue-950/40 mix-blend-multiply z-10"></div>
@@ -112,8 +111,8 @@ const AboutPronto: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" className="rounded-lg shadow-md w-full h-full object-cover" alt="Reunião estratégica" />
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" className="rounded-lg shadow-md w-full h-full object-cover mt-8" alt="Gestão corporativa" />
+              <img src="/images/sobre-origem1.jpg" className="rounded-lg shadow-md w-full h-full object-cover" alt="Reunião estratégica Pronto" />
+              <img src="/images/sobre-origem2.jpg" className="rounded-lg shadow-md w-full h-full object-cover mt-8" alt="Estratégia de crescimento" />
             </div>
           </div>
 
