@@ -448,6 +448,12 @@ const Home: React.FC = () => {
                               key={seg.id}
                               to={`/segmentos#${seg.id}`}
                               onMouseEnter={() => setActiveSegment(seg.id)}
+                              onClick={(e) => {
+                                 if (!isActive) {
+                                    e.preventDefault();
+                                    setActiveSegment(seg.id);
+                                 }
+                              }}
                               className={`
                                   group relative cursor-pointer transition-all duration-300 rounded-xl overflow-hidden block
                                   ${isActive ? 'bg-blue-900 shadow-lg py-8 px-8' : 'hover:bg-blue-900/30 py-6 px-4 border-b border-blue-800/30'}
