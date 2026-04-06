@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Printer, TrendingDown, Settings, ShieldCheck, ArrowRight, ChevronRight, ArrowUpRight, Search, Truck, BarChart3, AlertCircle, CheckCircle2, Plus, Copy, Receipt, Scan } from 'lucide-react';
 
 const PrintOutsourcing: React.FC = () => {
-   const [activeTab, setActiveTab] = useState('economia');
+   const [activeTab, setActiveTab] = useState('gestao');
    const [activeEquipmentTab, setActiveEquipmentTab] = useState('impressoras');
 
    // Estados para controlar a expansão dos cards individualmente
@@ -19,32 +19,49 @@ const PrintOutsourcing: React.FC = () => {
 
    const benefits = [
       {
+         id: 'gestao',
+         label: 'Gestão',
+         image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop',
+         badge: 'GESTÃO',
+         title: 'Gestão Simplificada',
+         description: 'Libere tempo da sua equipe. Assumimos a gestão completa do seu parque de impressão, desde chamados técnicos até o monitoramento de suprimentos e toners.',
+         bgColor: 'bg-white'
+      },
+      {
          id: 'economia',
          label: 'Economia',
          title: 'Redução de Custos Reais',
          description: 'Transforme custos fixos (Capex) em variáveis (Opex). Elimine gastos ocultos com estoques de toner, peças e chamados técnicos avulsos. Nossos clientes economizam em média 30%.',
-         image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2072&auto=format&fit=crop'
+         image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2072&auto=format&fit=crop',
+         badge: 'ECONOMIA',
+         bgColor: 'bg-white'
       },
       {
          id: 'flexibilidade',
          label: 'Flexibilidade',
-         title: 'Gestão Simplificada',
+         title: 'Crescimento Escalável',
          description: 'Nos responsabilizamos por todo o serviço e pela gestão do hardware. Aumente ou reduza o parque conforme a demanda sazonal da sua empresa sem burocracia.',
-         image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop'
+         image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop',
+         badge: 'FLEXIBILIDADE',
+         bgColor: 'bg-white'
       },
       {
          id: 'seguranca',
          label: 'Segurança',
          title: 'Proteção de Dados e Acesso',
          description: 'Impressão segura com liberação via crachá ou PIN. Criptografia de disco rígido e protocolos de segurança alinhados à LGPD para proteger informações sensíveis.',
-         image: 'https://images.unsplash.com/photo-1563986768494-4dee46a38569?q=80&w=2070&auto=format&fit=crop'
+         image: 'https://images.unsplash.com/photo-1563986768494-4dee46a38569?q=80&w=2070&auto=format&fit=crop',
+         badge: 'SEGURANÇA',
+         bgColor: 'bg-white'
       },
       {
          id: 'tecnologia',
          label: 'Tecnologia',
          title: 'Parque Sempre Atualizado',
          description: 'Esqueça equipamentos obsoletos. Garantimos atualização tecnológica constante (refresh) para manter a alta performance da sua equipe e qualidade de impressão.',
-         image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop'
+         image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop',
+         badge: 'TECNOLOGIA',
+         bgColor: 'bg-blue-50'
       }
    ];
 
@@ -215,16 +232,20 @@ const PrintOutsourcing: React.FC = () => {
          </Section>
 
          {/* Vantagens de Terceirizar (Interactive Tabs with Images) */}
-         <section className="py-24 bg-blue-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         <section className="py-24 bg-[#f0f5fa]">
+            <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                <div className="mb-10">
-                  <span className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-2 block">VANTAGENS</span>
-                  <h2 className="text-3xl md:text-4xl font-bold text-blue-950">Vantagens de terceirizar</h2>
+                  <span className="text-blue-600 font-bold tracking-widest text-xs uppercase mb-2 block">
+                     VANTAGENS
+                  </span>
+                  <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a8a] leading-tight">
+                     Vantagens de terceirizar
+                  </h2>
                </div>
 
-               <div className="grid grid-cols-1 lg:grid-cols-5 border border-slate-300 rounded-lg overflow-hidden bg-white shadow-lg">
-                  {/* Left Column: Navigation */}
-                  <div className="lg:col-span-2 bg-slate-100 flex flex-col divide-y divide-slate-200 border-r border-slate-200">
+               <div className="flex flex-col lg:flex-row border border-slate-200 rounded-xl overflow-hidden shadow-sm bg-white min-h-[600px]">
+                  {/* Left Column: List */}
+                  <div className="w-full lg:w-[35%] flex flex-col border-r border-slate-200">
                      {benefits.map((item) => {
                         const isActive = activeTab === item.id;
                         return (
@@ -232,17 +253,18 @@ const PrintOutsourcing: React.FC = () => {
                               key={item.id}
                               onClick={() => setActiveTab(item.id)}
                               className={`
-                             group flex items-center justify-between p-6 text-left transition-all duration-300
-                             ${isActive ? 'bg-white' : 'hover:bg-slate-200/50'}
-                          `}
+                                 group flex items-center justify-between py-5 px-6 text-left transition-all duration-300 outline-none border-b border-slate-200 last:border-b-0 flex-1
+                                 ${isActive ? item.bgColor : 'bg-slate-50 hover:bg-slate-100'}
+                              `}
                            >
-                              <span className={`text-lg font-bold ${isActive ? 'text-blue-900' : 'text-slate-500'}`}>
+                              <span className={`text-base md:text-lg font-bold transition-colors ${isActive ? 'text-[#1e3a8a]' : 'text-slate-500 group-hover:text-slate-700'}`}>
                                  {item.label}
                               </span>
+                              
                               <div className={`
-                             w-8 h-8 rounded flex items-center justify-center transition-colors
-                             ${isActive ? 'bg-blue-900 text-white' : 'bg-slate-300 text-slate-500'}
-                          `}>
+                                 w-8 h-8 rounded flex items-center justify-center transition-all duration-300
+                                 ${isActive ? 'bg-[#1e3a8a] text-white' : 'bg-slate-200 text-slate-400 group-hover:bg-slate-300'}
+                              `}>
                                  <ChevronRight className="w-5 h-5" />
                               </div>
                            </button>
@@ -250,30 +272,36 @@ const PrintOutsourcing: React.FC = () => {
                      })}
                   </div>
 
-                  {/* Right Column: Content with Image */}
-                  <div className="lg:col-span-3 bg-white p-8 md:p-12 flex flex-col justify-center">
-                     <div className="animate-fadeIn">
-                        <div className="relative h-64 w-full rounded-xl overflow-hidden mb-8 shadow-md">
-                           <img
-                              src={activeBenefit.image}
-                              alt={activeBenefit.title}
-                              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                  {/* Right Column: Content */}
+                  <div className={`w-full lg:w-[65%] p-8 md:p-12 flex flex-col justify-start transition-all duration-500 ${activeBenefit.bgColor}`}>
+                     <div className="max-w-xl w-full">
+                        <div className="mb-8 relative animate-fadeIn">
+                           <img 
+                              src={activeBenefit.image} 
+                              alt={activeBenefit.title} 
+                              className="w-full h-64 object-cover rounded-xl shadow-sm"
                            />
-                           <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent opacity-60"></div>
-                           <div className="absolute bottom-4 left-4">
-                              <span className="bg-lime-500 text-blue-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
-                                 {activeBenefit.label}
-                              </span>
-                           </div>
+                           {activeBenefit.badge && (
+                              <div className="absolute bottom-4 left-4 bg-lime-400 text-[#1e3a8a] text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
+                                 {activeBenefit.badge}
+                              </div>
+                           )}
                         </div>
-
-                        <h3 className="text-2xl md:text-3xl font-bold text-blue-950 mb-4">{activeBenefit.title}</h3>
-                        <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                        
+                        <h3 className="text-2xl md:text-3xl font-bold text-[#1e3a8a] mb-4">
+                           {activeBenefit.title}
+                        </h3>
+                        
+                        <p className="text-slate-600 text-base leading-relaxed mb-8 min-h-[80px]">
                            {activeBenefit.description}
                         </p>
-                        <Link to="/contato" className="inline-flex items-center font-bold text-blue-700 hover:text-blue-900 transition-colors group">
+
+                        <Link 
+                           to="/contato" 
+                           className="inline-flex items-center text-blue-600 font-bold hover:text-blue-800 transition-colors group text-sm"
+                        >
                            Falar com especialista
-                           <ArrowRight className="ml-2 w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+                           <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </Link>
                      </div>
                   </div>
