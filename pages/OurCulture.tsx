@@ -16,7 +16,7 @@ const OurCulture: React.FC = () => {
       <div className="relative h-[400px] w-full overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop"
+            src="/images/cultura-auditorio.jpg"
             alt="Equipe colaborativa trabalhando"
             className="w-full h-full object-cover"
           />
@@ -72,7 +72,7 @@ const OurCulture: React.FC = () => {
         <div
           className="absolute inset-0 w-[120%] h-full bg-cover bg-center will-change-transform animate-pan-horizontal-culture"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop")'
+            backgroundImage: 'url("/images/cultura-cafe.jpg")'
           }}
         ></div>
         <div className="absolute inset-0 bg-blue-900/30 mix-blend-multiply z-10"></div>
@@ -92,7 +92,7 @@ const OurCulture: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1 relative">
             <img
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"
+              src="/images/cultura-office.jpg"
               alt="Treinamento técnico da equipe"
               className="rounded-2xl shadow-xl w-full object-cover"
             />
@@ -161,7 +161,7 @@ const OurCulture: React.FC = () => {
           {/* Image Right with Vertical Parallax */}
           <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl order-2">
             <img
-              src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?q=80&w=1974&auto=format&fit=crop"
+              src="/images/cultura-auditorio.jpg"
               alt="Equipe Pronto reunida"
               className="absolute inset-0 w-full h-[120%] object-cover will-change-transform animate-pan-vertical-slow"
             />
@@ -266,7 +266,7 @@ const OurCulture: React.FC = () => {
             </div>
             <div className="relative h-64 lg:h-auto overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=2041&auto=format&fit=crop"
+                src="/images/cultura-floresta.jpg"
                 alt="Natureza e tecnologia"
                 className="absolute inset-0 w-full h-[120%] object-cover will-change-transform animate-pan-vertical-esg"
                 style={{ top: '-10%' }}
